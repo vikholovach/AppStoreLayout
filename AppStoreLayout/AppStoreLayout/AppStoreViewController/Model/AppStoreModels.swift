@@ -7,6 +7,7 @@
 
 import UIKit
 
+//MARK: - Model to show data
 struct AppModel: Hashable  {
     let title: String
     let subtitle: String
@@ -14,7 +15,7 @@ struct AppModel: Hashable  {
     let logoImage: UIImage
 }
 
-
+//MARK: Type of sections in collectionView
 enum Sections:  Int, CaseIterable {
     case big, mediumTitle, medium, smallTitle, small
 

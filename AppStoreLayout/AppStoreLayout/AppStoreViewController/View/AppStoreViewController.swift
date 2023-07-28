@@ -139,8 +139,6 @@ class AppStoreViewController: UIViewController {
 extension AppStoreViewController {
     // MARK: - Setup Layout
     private func createLayout() -> UICollectionViewLayout {
-        
-        
         let layout = UICollectionViewCompositionalLayout { (sectionIndex, _) -> NSCollectionLayoutSection? in
             let section = Sections(rawValue: sectionIndex)!
             switch section {
@@ -163,6 +161,7 @@ extension AppStoreViewController {
         return layout
     }
     
+    //MARK: - Top Section Layout
     private func createTopSection() -> NSCollectionLayoutSection {
         // section -> groups -> items -> size
         let itemSize = NSCollectionLayoutSize(
@@ -190,6 +189,7 @@ extension AppStoreViewController {
         return section
     }
     
+    //MARK: - Layout for Title Sections
     private func createTitleSection() -> NSCollectionLayoutSection {
         // section -> groups -> items -> size
         let itemSize = NSCollectionLayoutSize(
@@ -216,7 +216,7 @@ extension AppStoreViewController {
         return section
     }
     
-    
+    //MARK: - Middle Size Laypot 
     private func createMidleSectionWith(height: CGFloat) -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
